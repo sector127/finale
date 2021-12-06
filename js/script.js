@@ -1,0 +1,85 @@
+"use strict";
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnOpenModal = document.querySelectorAll(".show-modal");
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+for (let i = 0; i < btnOpenModal.length; i++) {
+  btnOpenModal[i].addEventListener("click", openModal);
+}
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (!modal.classList.contains("hidden") && e.key === "Escape") closeModal();
+});
+
+// slider
+
+$(function () {
+  var flag = 0;
+  $(".next").click(function () {
+    if (flag == 0) {
+      $(".c1").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c2").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c3").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 1;
+    } else if (flag == 1) {
+      $(".c3").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c1").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c2").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 2;
+    } else if (flag == 2) {
+      $(".c2").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c3").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c1").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 0;
+    }
+  });
+  $(".prev").click(function () {
+    if (flag == 0) {
+      $(".c3").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c1").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c2").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 1;
+    } else if (flag == 1) {
+      $(".c1").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c2").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c3").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 2;
+    } else if (flag == 2) {
+      $(".c2").css({
+        transform: "translateX(-200px) scale(1)",
+        "z-index": "9",
+      });
+      $(".c3").css({ transform: "translateX(200px) scale(1)", "z-index": "9" });
+      $(".c1").css({ transform: "translateX(0) scale(1.5)", "z-index": "99" });
+      flag = 0;
+    }
+  });
+});
