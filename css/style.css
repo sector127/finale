@@ -1,6 +1,6 @@
 body {
   background: url("../images/intro-bg.png") no-repeat;
-  background-color: #fbfaf0;
+  background-color: #fcfaec;
   background-size: contain;
   min-height: 100vh;
 }
@@ -45,12 +45,13 @@ body {
   align-items: flex-start;
   align-content: center;
   margin: 50px;
+  min-height: 100vh;
 }
 
 .intro-content h1 {
   font-size: 60px;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -58,7 +59,7 @@ body {
 .intro p {
   font-size: 20px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 25px;
   color: #fff;
   max-width: 400px;
@@ -80,7 +81,7 @@ body {
 
 .intro-button {
   margin: 20px 0 0 0;
-  background: #00f5f1;
+  background: #00f6ff;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -163,7 +164,7 @@ body {
   width: 80%;
   max-height: 100vh;
   height: 80%;
-  background-color: #f8f8f8;
+  background-color: #ffff00;
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -255,8 +256,8 @@ option {
   font-size: 14px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  background: #0eb300;
-  color: white;
+  background: #00b444;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,21 +308,17 @@ option {
 /* slider styles */
 
 .our-friends {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  margin: 0 auto;
+  min-height: 500px;
 }
 
 .our-friends h2 {
   font-size: 55px;
   margin-bottom: 150px;
   text-align: center;
-  font-family: "Roboto";
-  font-weight: 500;
-  color: #00f5f1;
-  text-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+  font-family: "Poppins";
+  font-weight: 900;
+  color: #00b444;
 }
 
 .slider {
@@ -377,7 +374,7 @@ option {
   padding: 5px;
   font-weight: 700;
   text-align: right;
-  background: #29df00;
+  background: #00b444;
 }
 
 .quotes {
@@ -388,26 +385,17 @@ option {
   align-items: flex-end;
 }
 
-.friends::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  position: absolute;
-  right: 0px;
-  top: 42px;
-}
-
 .friends:after {
   content: "";
-  width: 20px;
-  height: 20px;
-  background: rgb(20 106 0);
-  transform: rotate(45deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #136a00 transparent transparent transparent;
   z-index: -1;
   position: absolute;
-  top: 32px;
-  right: -5px;
+  top: 42px;
+  right: -10px;
 }
 
 .friends-quotes {
@@ -418,11 +406,11 @@ option {
 }
 
 .friends-quotes h6 {
-  font-size: 8px;
+  font-size: 7px;
   margin: 5px auto;
   color: #ccc;
-  border: 1px solid #ccc;
-  padding: 4px;
+  border: 1px solid #cccccc78;
+  padding: 3px;
   border-radius: 15px;
   background: #fff;
 }
@@ -430,7 +418,7 @@ option {
 .friends-quotes h6::before {
   content: "";
   height: 1px;
-  background: #ccc;
+  background: #cccccc78;
   width: 100px;
   position: absolute;
   z-index: -1;
@@ -445,7 +433,7 @@ option {
 .friends-quotes p::after {
   content: "";
   height: 1px;
-  background: #ccc;
+  background: #cccccc78;
   width: 100px;
   position: absolute;
   z-index: -1;
@@ -456,7 +444,7 @@ option {
 .prev,
 .next {
   position: absolute;
-  color: #00f5f1;
+  color: #00b444;
   font-size: 50px;
   line-height: 30px;
   text-align: center;
@@ -482,4 +470,116 @@ option {
 .prev:active,
 .next:active {
   transform: scale(0.7);
+}
+
+/* service styling */
+
+.path {
+  display: flex;
+  flex-direction: column;
+  background: url("../images/path.png") no-repeat;
+  margin: 0 0 0 50px;
+  border-radius: 15px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.path-title {
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #494738;
+  margin: 20px 0 0 0;
+}
+
+.item {
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+}
+
+.item:nth-child(2) {
+  transform: translateX(330px);
+}
+
+.serv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.serv-desc {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 50px 0 0;
+}
+
+.serv-desc h3 {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  color: #00b444;
+}
+
+.serv-desc p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #494738;
+  margin: 50px auto;
+}
+
+.zip {
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px 5px 5px 10px;
+  margin: 20px 0;
+  max-width: 260px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input#zip {
+  background: transparent;
+  width: 150px;
+  height: 50px;
+}
+
+input#zip::placeholder {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.zip-submit {
+  color: #00b444;
+  background: transparent;
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 250ms ease-in;
+  border-radius: 50%;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.zip-submit:hover {
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+  cursor: pointer;
 }
