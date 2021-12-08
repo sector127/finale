@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jeka.ge - Your buddy's buddy</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,8 +54,11 @@
             <li><a href="#">DAYCARE</a></li>
             <li><a href="#">BOARDING</a></li>
             <li><a href="#">SPA</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">PET WALKING</a></li>
+            <li><a href="#">PET SITTING</a></li>
+            <li class="webcam">
+              <a href="#"><i class="fas fa-video cam"></i>CAM</a>
+            </li>
             <li>
               <a href="#"><i class="fas fa-user"></i></a>
             </li>
@@ -94,6 +114,10 @@
                   name="e-mail-name"
                   placeholder="Email"
                 />
+              </div>
+              <div class="modal-img">
+                <img src="images/modal-image.png" alt="" />
+
                 <button type="submit" form="schedule" class="send-button">
                   <span>Send</span>
                   <div class="svg-wrapper-1">
@@ -113,9 +137,6 @@
                     </div>
                   </div>
                 </button>
-              </div>
-              <div class="modal-img">
-                <img src="images/modal-image.png" alt="" />
               </div>
             </div>
           </form>
@@ -203,20 +224,72 @@
       </div>
       <div class="serv-desc">
         <h3>How it Works</h3>
-        <p>
+        <p class="how">
           Because finding a good pet sitter shouldn’t be a hassle. With Fetch!
           It’s as easy as…
         </p>
-        <div class="zip">
-          <form action="send_zip">
-            <input type="text" id="zip" name="zip" placeholder="Enter ZIP" />
-          </form>
+        <p class="highlight">Enter Your Location and Fetch Our Services</p>
+        <form action="send_zip" method="post" id="zip" class="zip">
+          <input type="text" id="zip" name="zip" placeholder="Enter ZIP" />
           <button type="submit" class="zip-submit" form="zip">
             <i class="fas fa-arrow-circle-right"></i>
           </button>
-        </div>
+        </form>
       </div>
     </section>
     <script src="js/script.js"></script>
+    <footer class="main-footer">
+      <div class="menu-about">
+        <h3>About</h3>
+        <ul class="footer-menu">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Frenchase with us</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="menu-resources">
+        <h3>Resources</h3>
+        <ul class="footer-menu">
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Pet Resource Center</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up to receive Newsletter</p>
+        <form
+          action="mail_send"
+          method="post"
+          id="mail"
+          class="newsletter-form"
+        >
+          <input
+            type="text"
+            id="subscription"
+            name="subscription"
+            placeholder="Email Address"
+          />
+          <button type="submit" class="zip-submit footer-submit" form="mail">
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </form>
+        <div class="social-icons">
+          <a href="https://facebook.com"
+            ><i class="fab fa-facebook-f social-icon"></i
+          ></a>
+          <a href="https://twitter.com"
+            ><i class="fab fa-twitter social-icon"></i
+          ></a>
+          <a href="https://instagram.com"
+            ><i class="fab fa-instagram social-icon"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
