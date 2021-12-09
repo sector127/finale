@@ -652,6 +652,11 @@ input#subscription::placeholder {
   justify-content: space-between;
 }
 
+input#subscription {
+  max-width: 300px;
+  width: 100%;
+}
+
 .footer-submit {
   color: #005248;
 }
@@ -659,7 +664,7 @@ input#subscription::placeholder {
 .social-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .social-icons a {
