@@ -336,7 +336,7 @@ option {
 
 .our-friends {
   margin: 0 auto;
-  min-height: 500px;
+  min-height: 350px;
 }
 
 .our-friends h2 {
@@ -400,7 +400,9 @@ option {
   padding: 5px;
   font-weight: 700;
   text-align: right;
-  background: #00b444;
+  background: #ffff00;
+  border-radius: 0 4px 0 0;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 16%);
 }
 
 .quotes {
@@ -504,6 +506,7 @@ option {
   display: flex;
   flex-direction: column;
   background: url("../images/path.png") no-repeat;
+  background-size: contain;
   margin: 0 0 0 50px;
   border-radius: 15px;
   max-width: 480px;
@@ -519,8 +522,8 @@ option {
 }
 
 .item {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -540,12 +543,18 @@ option {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
 }
 
 .serv-desc {
   max-width: 480px;
   width: 100%;
-  margin: 0 50px 0 0;
+  background: #ffff00;
+  padding: 50px;
+  border-radius: 100px 0 0 100px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  max-height: 480px;
 }
 
 .serv-desc h3,
