@@ -564,7 +564,8 @@ option {
 }
 
 .serv-desc h3,
-.join-us-content h3 {
+.join-us-content h3,
+.difference-content h3 {
   font-size: 48px;
   font-weight: 900;
   font-family: "Poppins", sans-serif;
@@ -744,4 +745,44 @@ input#subscription {
 
 .social-icons a:hover {
   transform: translateY(-3px);
+}
+
+/* daycare */
+
+.difference {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+
+.difference-img img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.difference-content {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #494738;
+  max-width: 500px;
+  width: 100%;
+}
+
+.difference-content h3 {
+  margin: 20px;
+}
+
+.routine li {
+  margin: 0 0 20px 0;
+}
+
+.routine li::before {
+  content: "\f1b0";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 80px;
+  color: #00b444;
 }
