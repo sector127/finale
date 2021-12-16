@@ -157,12 +157,14 @@ body {
   }
 }
 
-.show-modal {
+.show-modal,
+.show-modal-webcam {
   border: none;
   cursor: pointer;
 }
 
-.close-modal {
+.close-modal,
+.close-modal-webcam {
   position: absolute;
   top: 0;
   right: 20px;
@@ -178,7 +180,8 @@ body {
   display: none;
 }
 
-.modal {
+.modal,
+.modal-webcam {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -208,7 +211,8 @@ body {
   }
 }
 
-.modal h3 {
+.modal h3,
+.modal-webcam h3 {
   color: #00b444;
   font-size: 30px;
   font-weight: 900;

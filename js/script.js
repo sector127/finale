@@ -4,6 +4,7 @@ const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnOpenModal = document.querySelectorAll(".show-modal");
+
 const openModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
@@ -22,6 +23,33 @@ overlay.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
   if (!modal.classList.contains("hidden") && e.key === "Escape") closeModal();
+});
+
+// modal webcam
+
+const modalWebcam = document.querySelector(".modal-webcam");
+const btnCloseModalWebcam = document.querySelector(".close-modal-webcam");
+const btnOpenModalWebcam = document.querySelectorAll(".show-modal-webcam");
+
+const openModalWebcam = function () {
+  modalWebcam.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeModalWebcam = function () {
+  modalWebcam.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+for (let i = 0; i < btnOpenModalWebcam.length; i++) {
+  btnOpenModalWebcam[i].addEventListener("click", openModalWebcam);
+}
+
+btnCloseModalWebcam.addEventListener("click", closeModalWebcam);
+overlay.addEventListener("click", closeModalWebcam);
+
+document.addEventListener("keydown", function (e) {
+  if (!modalWebcam.classList.contains("hidden") && e.key === "Escape")
+    closeModalWebcam();
 });
 
 // slider

@@ -61,7 +61,27 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li class="webcam">
-              <a href="#"><i class="fas fa-video cam"></i>WebCam</a>
+              <button class="show-modal-webcam">
+                <a href="#"><i class="fas fa-video cam"></i>WebCam</a>
+              </button>
+              <div class="modal-webcam hidden">
+                <button class="close-modal-webcam">&times;</button>
+                <h3>Please enter room key or login</h3>
+                <form action="send_page" method="post" id="schedule">
+                  <div class="schedule-form">
+                    <div class="form-description">
+                      <label for="services">Choose a service:</label>
+                      <select id="services" name="services">
+                        <option value="daycare">Daycare</option>
+                        <option value="boarding">Boarding</option>
+                        <option value="spa">Spa</option>
+                        <option value="walking">Pet Walking</option>
+                        <option value="sitting">Pet Sitting</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
             <li>
               <a href="#"><i class="fas fa-user"></i></a>
