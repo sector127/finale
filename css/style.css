@@ -176,12 +176,7 @@ body {
   background: none;
 }
 
-.hidden {
-  display: none;
-}
-
-.modal,
-.modal-webcam {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -199,6 +194,64 @@ body {
   animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
+.modal-webcam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  width: 80%;
+  max-height: 50vh;
+  height: 80%;
+  background-color: #ffff00;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal h3,
+.modal-webcam h3 {
+  color: #00b444;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-webcam h3 {
+  font-size: 20px;
+  margin: 30px 0 0 0;
+}
+
+.modal-webcam p {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #494738;
+  margin: 10px 0 0 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.out {
+  animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
 @keyframes roadRunnerIn {
   0% {
     transform: translate(-1500px, -200px) skewX(30deg) scaleX(1.3);
@@ -211,23 +264,25 @@ body {
   }
 }
 
-.modal h3,
-.modal-webcam h3 {
-  color: #00b444;
-  font-size: 30px;
-  font-weight: 900;
-  font-family: "Poppins", sans-serif;
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
+@keyframes roadRunnerOut {
+  0% {
+    transform: translateX(0px) skewX(0deg) scaleX(1);
+  }
+  30% {
+    transform: translateX(-30px) skewX(-5deg) scaleX(0.9);
+  }
+  100% {
+    transform: translateX(1500px) skewX(30deg) scaleX(1.3);
+  }
 }
 
 .schedule-form {
@@ -272,6 +327,7 @@ textarea {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
+  border-radius: 10px;
 }
 
 input::placeholder,

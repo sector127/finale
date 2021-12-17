@@ -61,23 +61,18 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li class="webcam">
-              <button class="show-modal-webcam">
-                <a href="#"><i class="fas fa-video cam"></i>WebCam</a>
-              </button>
+              <a href="#" class="show-modal-webcam"
+                ><i class="fas fa-video cam"></i>WebCam</a
+              >
               <div class="modal-webcam hidden">
                 <button class="close-modal-webcam">&times;</button>
-                <h3>Please enter room key or login</h3>
-                <form action="send_page" method="post" id="schedule">
+                <h3>Please enter a room key</h3>
+                <p>To see your fluffy friend enter a key</p>
+                <form action="webcam" method="post" id="webcam-form">
                   <div class="schedule-form">
                     <div class="form-description">
-                      <label for="services">Choose a service:</label>
-                      <select id="services" name="services">
-                        <option value="daycare">Daycare</option>
-                        <option value="boarding">Boarding</option>
-                        <option value="spa">Spa</option>
-                        <option value="walking">Pet Walking</option>
-                        <option value="sitting">Pet Sitting</option>
-                      </select>
+                      <label for="services">Room key:</label>
+                      <input type="text" name="room-key" id="room-key" />
                     </div>
                   </div>
                 </form>
