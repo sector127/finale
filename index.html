@@ -66,20 +66,91 @@
               >
               <div class="modal-webcam hidden">
                 <button class="close-modal-webcam">&times;</button>
-                <h3>Please enter a room key</h3>
-                <p>To see your fluffy friend enter a key</p>
+                <h3>Webcams</h3>
+                <p>To see your furry friend enter a key</p>
                 <form action="webcam" method="post" id="webcam-form">
                   <div class="schedule-form">
                     <div class="form-description">
                       <label for="services">Room key:</label>
-                      <input type="text" name="room-key" id="room-key" />
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-key"></i>
+                        </span>
+                        <input type="text" name="room-key" id="room-key" />
+                      </div>
                     </div>
                   </div>
+                  <button class="intro-button webcam-button">
+                    <div class="button-text">Watch!</div>
+                  </button>
                 </form>
               </div>
             </li>
-            <li>
-              <a href="#"><i class="fas fa-user"></i></a>
+            <li class="login">
+              <a href="#" class="show-modal-login hidden"
+                ><i class="fas fa-user"></i
+              ></a>
+              <div class="modal-login hidden">
+                <button class="close-modal-login">&times;</button>
+                <h3>Login into your account</h3>
+                <form action="login" method="post" id="login-form">
+                  <div class="schedule-form">
+                    <div class="form-description">
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <input
+                          type="text"
+                          name="email"
+                          id="email"
+                          placeholder="Email"
+                        />
+                      </div>
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-lock"></i>
+                        </span>
+                        <input
+                          type="text"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div class="remember-me">
+                        <input
+                          type="checkbox"
+                          id="remember"
+                          name="remember"
+                          value="remember"
+                        />
+                        <label for="remember" id="remember-label"
+                          >Remember me</label
+                        >
+                        <a href="#" class="forgot">Forgot Password?</a>
+                      </div>
+                      <div class="sign-up-option">
+                        <h5>Or sign up using</h5>
+                        <div class="sign-up-social">
+                          <a href="https://facebook.com"
+                            ><i class="fab fa-facebook login-fb"></i
+                          ></a>
+                          <a href="https://google.com"
+                            ><i class="fab fa-google login-google"></i
+                          ></a>
+                          <a href="https://twitter.com"
+                            ><i class="fab fa-twitter login-tw"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="intro-button webcam-button">
+                    <div class="button-text">Login</div>
+                  </button>
+                </form>
+              </div>
             </li>
           </ul>
         </nav>
@@ -88,11 +159,7 @@
     <section class="intro">
       <div class="intro-content">
         <h1>Your Buddy's buddy</h1>
-        <p>
-          We offer everything your furry family member requires with
-          award-winning dog daycare, overnight, weekend and holiday boarding,
-          and spa services.
-        </p>
+        <p>We offer everything your furry family member requires.</p>
         <button class="intro-button show-modal">
           <div class="paw"><i class="fas fa-paw"></i></div>
           <div class="button-text">Schedule Service</div>
@@ -105,13 +172,15 @@
             <div class="schedule-form">
               <div class="form-description">
                 <label for="services">Choose a service:</label>
-                <select id="services" name="services">
-                  <option value="daycare">Daycare</option>
-                  <option value="boarding">Boarding</option>
-                  <option value="spa">Spa</option>
-                  <option value="walking">Pet Walking</option>
-                  <option value="sitting">Pet Sitting</option>
-                </select>
+                <div class="select-wrapper">
+                  <select id="services" name="services">
+                    <option value="daycare">Daycare</option>
+                    <option value="boarding">Boarding</option>
+                    <option value="spa">Spa</option>
+                    <option value="walking">Pet Walking</option>
+                    <option value="sitting">Pet Sitting</option>
+                  </select>
+                </div>
                 <label for="date">Pick a date:</label>
                 <input type="datetime-local" id="date" name="date" />
                 <label for="description">Special requirements</label>
@@ -121,23 +190,32 @@
                   name="description-name"
                   placeholder="Description"
                 ></textarea>
-                <label for="sender">Your details</label>
-                <input
-                  type="text"
-                  id="sender"
-                  name="sender-name"
-                  placeholder="Username"
-                />
-                <input
-                  type="email"
-                  id="e-mail"
-                  name="e-mail-name"
-                  placeholder="Email"
-                />
               </div>
               <div class="modal-img">
                 <img src="images/modal-image.png" alt="" />
-
+                <label for="sender">Your details</label>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="sender"
+                    name="sender-name"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input
+                    type="email"
+                    id="e-mail"
+                    name="e-mail-name"
+                    placeholder="Email"
+                  />
+                </div>
                 <button type="submit" form="schedule" class="send-button">
                   <span>Send</span>
                   <div class="svg-wrapper-1">
@@ -179,7 +257,7 @@
           <div class="icon">
             <img src="images/path-pick.png" alt="pick" />
           </div>
-          <div class="path-title">Pick</div>
+          <div class="path-title">Fetch</div>
         </div>
         <div class="item">
           <div class="icon">

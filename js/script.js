@@ -11,7 +11,7 @@ const openModal = function () {
 };
 const closeModal = function () {
   modal.classList.add("hidden");
-  modal.classList.add("out");
+  // modal.classList.add("out");
   overlay.classList.add("hidden");
 };
 
@@ -51,6 +51,33 @@ overlay.addEventListener("click", closeModalWebcam);
 document.addEventListener("keydown", function (e) {
   if (!modalWebcam.classList.contains("hidden") && e.key === "Escape")
     closeModalWebcam();
+});
+
+//modal login
+
+const modalLogin = document.querySelector(".modal-login");
+const btnCloseModalLogin = document.querySelector(".close-modal-login");
+const btnOpenModalLogin = document.querySelectorAll(".show-modal-login");
+
+const openModalLogin = function () {
+  modalLogin.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeModalLogin = function () {
+  modalLogin.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+for (let i = 0; i < btnOpenModalWebcam.length; i++) {
+  btnOpenModalLogin[i].addEventListener("click", openModalLogin);
+}
+
+btnCloseModalLogin.addEventListener("click", closeModalLogin);
+overlay.addEventListener("click", closeModalLogin);
+
+document.addEventListener("keydown", function (e) {
+  if (!modalLogin.classList.contains("hidden") && e.key === "Escape")
+    closeModalLogin();
 });
 
 // slider

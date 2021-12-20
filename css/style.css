@@ -24,7 +24,7 @@ body {
 }
 
 .active a {
-  color: #494738 !important;
+  color: #005248 !important;
 }
 
 .navigation ul {
@@ -35,7 +35,7 @@ body {
 .navigation ul li,
 .navigation ul li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   padding: 10px 2px;
   font-family: "Poppins", sans-serif;
@@ -43,13 +43,11 @@ body {
   align-items: center;
   justify-content: center;
   align-content: center;
-  transition: all 250ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .navigation ul li a:hover {
-  /* background: rgb(255 255 255 / 40%); */
-  /* border-radius: 5px; */
-  color: #494738;
+  color: #005248;
 }
 
 .webcam a {
@@ -97,9 +95,9 @@ body {
 }
 
 .intro img {
-  max-width: 360px;
+  max-width: 480px;
   width: 100%;
-  margin: 3rem;
+  margin: 7rem;
 }
 
 .intro-button {
@@ -134,6 +132,14 @@ body {
   perspective: 1000px;
 }
 
+.webcam-button {
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
 @keyframes shake {
   10%,
   90% {
@@ -158,13 +164,15 @@ body {
 }
 
 .show-modal,
-.show-modal-webcam {
+.show-modal-webcam,
+.show-modal-login {
   border: none;
   cursor: pointer;
 }
 
 .close-modal,
-.close-modal-webcam {
+.close-modal-webcam,
+.close-modal-login {
   position: absolute;
   top: 0;
   right: 20px;
@@ -183,7 +191,7 @@ body {
   transform: translate(-50%, -50%);
   max-width: 768px;
   width: 80%;
-  max-height: 100vh;
+  max-height: 500px;
   height: 80%;
   background-color: #ffff00;
   padding: 40px;
@@ -194,17 +202,18 @@ body {
   animation: roadRunnerIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-.modal-webcam {
+.modal-webcam,
+.modal-login {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 300px;
+  max-width: 350px;
   width: 80%;
-  max-height: 50vh;
+  max-height: 400px;
   height: 80%;
   background-color: #ffff00;
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -216,19 +225,22 @@ body {
 }
 
 .modal h3,
-.modal-webcam h3 {
+.modal-webcam h3,
+.modal-login h3 {
   color: #00b444;
   font-size: 30px;
   font-weight: 900;
   font-family: "Poppins", sans-serif;
 }
 
-.modal-webcam h3 {
+.modal-webcam h3,
+.modal-login h3 {
   font-size: 20px;
   margin: 30px 0 0 0;
 }
 
-.modal-webcam p {
+.modal-webcam p,
+.modal-login p {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -291,28 +303,153 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .form-description {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 300px;
   width: 100%;
+  margin: 20px 0 0 0;
 }
 
-.form-description label {
+.form-description label,
+.modal-img label {
   color: #494738;
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   margin: 10px 0 10px 0;
 }
 
+.modal-img {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-img img {
-  max-width: 260px;
+  max-width: 160px;
   width: 100%;
   margin: 0 auto;
+}
+
+.form-input {
+  position: relative;
+  max-width: 290px;
+  width: 100%;
+}
+
+.form-input span {
+  position: absolute;
+  top: 12px;
+  padding-left: 20px;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.select-wrapper {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 12px;
+  right: 10px;
+  position: absolute;
+  color: #fff;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.remember-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+  padding: 10px 0;
+}
+
+.remember-me .forgot {
+  font-size: 13px;
+  color: blue;
+}
+
+.sign-up-option {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.sign-up-option h5 {
+  color: #494738;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.sign-up-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-fb,
+.login-google,
+.login-tw {
+  color: #494738;
+  font-size: 22px;
+  transition: all 0.3s;
+}
+
+.login-fb:hover {
+  color: #1877f2;
+}
+
+.login-google:hover {
+  color: #ea4335;
+}
+
+.login-tw:hover {
+  color: #1da1f2;
+}
+
+label#remember-label {
+  font-size: 13px;
+  margin: 0 10px 0 0;
+}
+
+input#remember {
+  appearance: auto;
+  height: 12px;
+}
+
+input#email,
+input#password,
+input#room-key {
+  margin: 0 0 20px 0;
+  max-width: 290px;
+  width: 100%;
+  padding: 0 0 0 50px;
+}
+
+input#password {
+  margin: 0 auto;
+}
+
+select#services,
+input#date,
+textarea#description {
+  max-width: 300px;
+  width: 100%;
 }
 
 select,
@@ -322,25 +459,35 @@ textarea {
   border: none;
   background: #494738;
   height: 40px;
-  width: 100%;
   padding: 7px;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  border-radius: 10px;
+  font-weight: 300;
+  border-radius: 20px;
+  appearance: none;
+  text-indent: 10px;
+  transition: all 300ms ease;
+}
+select:focus,
+input:focus,
+textarea:focus {
+  box-shadow: 0 3px 7px #000;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #fbfaf0;
+  color: #aaa;
 }
 
-input#sender {
-  margin: 0 0 2px 0;
+input#sender,
+input#e-mail {
+  margin: 0 0 10px 0;
+  padding: 0 0 0 45px;
 }
 
 textarea {
-  height: 75px;
+  height: 150px;
+  border-radius: 5px;
 }
 
 option {
@@ -348,9 +495,10 @@ option {
 }
 
 .send-button {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   width: 100%;
-  height: 58px;
+  height: 40px;
+  border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -464,6 +612,7 @@ option {
 .c3 img {
   max-width: 200px;
   margin: 0 10px 0 0;
+  clip-path: circle(38% at 50% 50%);
 }
 
 .friends h3 {
@@ -623,9 +772,8 @@ option {
   width: 100%;
   background: #ffff00;
   padding: 50px;
-  border-radius: 100px 0 0 100px;
+  border-radius: 10px 0 0 10px;
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
-  max-height: 480px;
 }
 
 .serv-desc h3,
@@ -638,11 +786,10 @@ option {
 }
 
 .how {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #494738;
-  margin: 50px auto;
 }
 
 .highlight {
@@ -678,6 +825,7 @@ input#zip::placeholder,
 input#subscription::placeholder {
   color: #ccc;
   font-size: 16px;
+  font-weight: 300;
 }
 
 .zip-submit {
@@ -720,7 +868,7 @@ input#subscription::placeholder {
 }
 
 .join-us-img img {
-  max-width: 360px;
+  max-width: 260px;
   width: 100%;
 }
 
@@ -736,16 +884,13 @@ input#subscription::placeholder {
 /* footer styling */
 
 .main-footer {
-  min-height: 60vh;
-  background: #005248;
-  margin: 50px 0 0 0;
-}
-
-.main-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  background: #005248;
+  padding: 100px 0;
 }
 
 .footer-menu li a,
@@ -817,14 +962,34 @@ input#subscription {
 .difference {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-content: flex-start;
+  align-items: center;
   margin: 60px 0;
 }
 
 .difference-img img {
   max-width: 500px;
   width: 100%;
+  margin: 0 0 0 50px;
+  border-radius: 10px;
+}
+
+.daycare-img img {
+  margin: 0 50px 0 0;
+}
+
+.daycare-items {
+  border-radius: 0 10px 10px 0;
+}
+
+.boarding-green {
+  background-color: #00b444;
+  border: 5px dashed #ffff00;
+}
+
+.boarding-green h3 {
+  color: #ffff00;
 }
 
 .difference-content {
@@ -832,7 +997,7 @@ input#subscription {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #494738;
-  max-width: 500px;
+  max-width: 650px;
   width: 100%;
 }
 
@@ -842,10 +1007,12 @@ input#subscription {
 
 .difference-content p {
   margin: 10px 0;
+  font-size: 18px;
 }
 
 .routine li {
   margin: 0 0 20px 0;
+  font-size: 18px;
 }
 
 .routine li::before {
@@ -853,6 +1020,6 @@ input#subscription {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  left: 80px;
+  left: 25px;
   color: #00b444;
 }
