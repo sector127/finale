@@ -112,7 +112,7 @@ body {
   height: 56px;
   padding: 0 45px 0 45px;
   border-radius: 28px;
-  color: #ffffff;
+  color: #f7f2cb;
   font-size: 16px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
@@ -344,10 +344,12 @@ body {
 
 .form-input span {
   position: absolute;
-  top: 12px;
-  padding-left: 20px;
+  top: 0px;
+  height: 40px;
+  padding: 12px 10px 0px 20px;
   color: #aaa;
   font-size: 16px;
+  border-right: 1px solid rgb(0 0 0 / 20%);
 }
 
 .select-wrapper {
@@ -380,7 +382,7 @@ body {
 
 .remember-me .forgot {
   font-size: 13px;
-  color: blue;
+  color: #1779ba;
 }
 
 .sign-up-option {
@@ -555,12 +557,11 @@ option {
 
 .our-friends {
   margin: 0 auto;
-  min-height: 350px;
+  overflow: hidden;
 }
 
 .our-friends h2 {
   font-size: 55px;
-  margin-bottom: 150px;
   text-align: center;
   font-family: "Poppins";
   font-weight: 900;
@@ -577,16 +578,20 @@ option {
   align-content: center;
   justify-content: center;
   align-items: center;
+  height: 350px;
 }
 
 .c1,
 .c2,
 .c3 {
-  width: 400px;
+  max-width: 400px;
+  width: 60%;
   position: absolute;
   transition: all 500ms ease;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   border-radius: 7px;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -611,39 +616,26 @@ option {
 .c2 img,
 .c3 img {
   max-width: 200px;
+  width: 100%;
   margin: 0 10px 0 0;
   clip-path: circle(38% at 50% 50%);
 }
 
 .friends h3 {
-  margin: 0 -30px 0 0;
-  padding: 5px;
   font-weight: 700;
-  text-align: right;
-  background: #ffff00;
-  border-radius: 0 4px 0 0;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 16%);
+  text-align: center;
+  border-bottom: 3px solid #00b444;
+  padding: 5px;
 }
 
 .quotes {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.friends:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 0;
-  border-color: #136a00 transparent transparent transparent;
-  z-index: -1;
-  position: absolute;
-  top: 42px;
-  right: -10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
+  width: 100%;
 }
 
 .friends-quotes {
@@ -663,30 +655,8 @@ option {
   background: #fff;
 }
 
-.friends-quotes h6::before {
-  content: "";
-  height: 1px;
-  background: #cccccc78;
-  width: 100px;
-  position: absolute;
-  z-index: -1;
-  left: 254px;
-  margin: 3px 0 0 0;
-}
-
 .friends-quotes p {
   text-align: center;
-}
-
-.friends-quotes p::after {
-  content: "";
-  height: 1px;
-  background: #cccccc78;
-  width: 100px;
-  position: absolute;
-  z-index: -1;
-  left: 254px;
-  bottom: 30px;
 }
 
 .prev,
@@ -700,6 +670,7 @@ option {
   top: 50%;
   transition: all 250ms ease-in;
   border-radius: 50%;
+  z-index: 999;
 }
 .prev {
   left: 15%;
@@ -783,6 +754,7 @@ option {
   font-weight: 900;
   font-family: "Poppins", sans-serif;
   color: #00b444;
+  margin: 20px 0;
 }
 
 .how {
@@ -819,6 +791,11 @@ input#subscription {
   height: 50px;
   font-size: 18px;
   color: #494738;
+}
+
+input#zip:focus,
+input#subscription:focus {
+  box-shadow: none;
 }
 
 input#zip::placeholder,
@@ -981,6 +958,10 @@ input#subscription {
 
 .daycare-items {
   border-radius: 0 10px 10px 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #494738;
 }
 
 .boarding-green {
@@ -1022,4 +1003,41 @@ input#subscription {
   position: absolute;
   left: 25px;
   color: #00b444;
+}
+
+/* Back to top button */
+#btt-button {
+  display: inline-block;
+  background-color: #00b444;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#btt-button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#btt-button:hover {
+  cursor: pointer;
+  background-color: #00993b;
+}
+#btt-button:active {
+  background-color: #00993b;
+}
+#btt-button.show {
+  opacity: 1;
+  visibility: visible;
 }

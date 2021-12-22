@@ -61,10 +61,96 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li class="webcam">
-              <a href="#"><i class="fas fa-video cam"></i>WebCam</a>
+              <a href="#" class="show-modal-webcam"
+                ><i class="fas fa-video cam"></i>WebCam</a
+              >
+              <div class="modal-webcam hidden">
+                <button class="close-modal-webcam">&times;</button>
+                <h3>Webcams</h3>
+                <p>To see your furry friend enter a key</p>
+                <form action="webcam" method="post" id="webcam-form">
+                  <div class="schedule-form">
+                    <div class="form-description">
+                      <label for="services">Room key:</label>
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-key"></i>
+                        </span>
+                        <input type="text" name="room-key" id="room-key" />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="intro-button webcam-button">
+                    <div class="button-text">Watch!</div>
+                  </button>
+                </form>
+              </div>
             </li>
-            <li>
-              <a href="#"><i class="fas fa-user"></i></a>
+            <li class="login">
+              <a href="#" class="show-modal-login hidden"
+                ><i class="fas fa-user"></i
+              ></a>
+              <div class="modal-login hidden">
+                <button class="close-modal-login">&times;</button>
+                <h3>Login into your account</h3>
+                <form action="login" method="post" id="login-form">
+                  <div class="schedule-form">
+                    <div class="form-description">
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <input
+                          type="text"
+                          name="email"
+                          id="email"
+                          placeholder="Email"
+                        />
+                      </div>
+                      <div class="form-input">
+                        <span>
+                          <i class="fa fa-lock"></i>
+                        </span>
+                        <input
+                          type="text"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div class="remember-me">
+                        <input
+                          type="checkbox"
+                          id="remember"
+                          name="remember"
+                          value="remember"
+                        />
+                        <label for="remember" id="remember-label"
+                          >Remember me</label
+                        >
+                        <a href="#" class="forgot">Forgot Password?</a>
+                      </div>
+                      <div class="sign-up-option">
+                        <h5>Or sign up using</h5>
+                        <div class="sign-up-social">
+                          <a href="https://facebook.com" target="blank"
+                            ><i class="fab fa-facebook login-fb"></i
+                          ></a>
+                          <a href="https://google.com" target="blank"
+                            ><i class="fab fa-google login-google"></i
+                          ></a>
+                          <a href="https://twitter.com" target="blank"
+                            ><i class="fab fa-twitter login-tw"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="intro-button webcam-button">
+                    <div class="button-text">Login</div>
+                  </button>
+                </form>
+              </div>
             </li>
           </ul>
         </nav>
@@ -77,6 +163,86 @@
           We provide recurring daycare for your dog, providing safe
           socialization, education and exercise.
         </p>
+        <button class="intro-button show-modal">
+          <div class="paw"><i class="fas fa-paw"></i></div>
+          <div class="button-text">Schedule Service</div>
+        </button>
+        <p>Or Call <a href="tel:+9950322770011">+9950322770011</a></p>
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h3>Schedule Service</h3>
+          <form action="send_page" method="post" id="schedule">
+            <div class="schedule-form">
+              <div class="form-description">
+                <label for="services">Choose a service:</label>
+                <div class="select-wrapper">
+                  <select id="services" name="services">
+                    <option value="daycare">Daycare</option>
+                    <option value="boarding">Boarding</option>
+                    <option value="spa">Spa</option>
+                    <option value="walking">Pet Walking</option>
+                    <option value="sitting">Pet Sitting</option>
+                  </select>
+                </div>
+                <label for="date">Pick a date:</label>
+                <input type="datetime-local" id="date" name="date" />
+                <label for="description">Special requirements</label>
+                <textarea
+                  class="desc"
+                  id="description"
+                  name="description-name"
+                  placeholder="Description"
+                ></textarea>
+              </div>
+              <div class="modal-img">
+                <img src="images/modal-image.png" alt="" />
+                <label for="sender">Your details</label>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="sender"
+                    name="sender-name"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input
+                    type="email"
+                    id="e-mail"
+                    name="e-mail-name"
+                    placeholder="Email"
+                  />
+                </div>
+                <button type="submit" form="schedule" class="send-button">
+                  <span>Send</span>
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          fill="currentColor"
+                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="overlay hidden"></div>
       </div>
       <div class="intro-img">
         <img src="images/daycare-3.png" alt="daycare" />
@@ -101,7 +267,7 @@
       </div>
     </section>
     <section class="difference">
-      <div class="difference-content serv-desc">
+      <div class="daycare-items serv-desc">
         <h3>The jeka's day</h3>
         <ul class="routine">
           <li>
