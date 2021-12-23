@@ -50,6 +50,20 @@ body {
   color: #005248;
 }
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
 .webcam a {
   color: #ffff00;
 }
@@ -945,15 +959,23 @@ input#subscription {
   margin: 60px 0;
 }
 
+.difference-img {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .difference-img img {
   max-width: 500px;
   width: 100%;
-  margin: 0 0 0 50px;
-  border-radius: 10px;
+  transition: all 500ms ease-in-out;
 }
 
-.daycare-img img {
-  margin: 0 50px 0 0;
+.difference-img img:hover {
+  transform: scale(1.1) rotate(3deg);
+  filter: brightness(1.1);
 }
 
 .daycare-items {

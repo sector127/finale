@@ -156,3 +156,25 @@ btn.on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, "300");
 });
+
+// hamburger menu
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navigation ul");
+const navMenuRt = document.querySelector(".navigation.rt-nav ul");
+const navLink = document.querySelectorAll(".navigation.rt-nav ul a");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+  hamburger.classList.toggle("act");
+  navMenu.classList.toggle("act");
+  navMenuRt.classList.toggle("act");
+}
+
+function closeMenu() {
+  hamburger.classList.remove("act");
+  navMenu.classList.remove("act");
+  navMenuRt.classList.remove("act");
+}

@@ -1,0 +1,51 @@
+@media only screen and (max-width: 768px) {
+  .navigation ul {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background-color: #494738;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    margin: 0;
+  }
+
+  .navigation ul.act {
+    left: 0;
+  }
+
+  .navigation.rt-nav ul {
+    top: 330px;
+    left: -100%;
+  }
+
+  .navigation.rt-nav ul.act {
+    top: 330px;
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.act .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.act .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.act .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
