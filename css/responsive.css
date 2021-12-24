@@ -54,6 +54,11 @@
     height: 100%;
     padding: 20px;
   }
+  .form-input,
+  .send-button {
+    max-width: 300px;
+    width: 100%;
+  }
   .modal-img,
   input#sender,
   input#e-mail {
@@ -126,6 +131,7 @@
 
   .main-footer {
     padding: 100px 10px;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
