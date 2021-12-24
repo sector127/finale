@@ -66,93 +66,11 @@
               <a href="#" class="show-modal-webcam"
                 ><i class="fas fa-video cam"></i>WebCam</a
               >
-              <div class="modal-webcam hidden">
-                <button class="close-modal-webcam">&times;</button>
-                <h3>Webcams</h3>
-                <p>To see your furry friend enter a key</p>
-                <form action="webcam" method="post" id="webcam-form">
-                  <div class="schedule-form">
-                    <div class="form-description">
-                      <label for="services">Room key:</label>
-                      <div class="form-input">
-                        <span>
-                          <i class="fa fa-key"></i>
-                        </span>
-                        <input type="text" name="room-key" id="room-key" />
-                      </div>
-                    </div>
-                  </div>
-                  <button class="intro-button webcam-button">
-                    <div class="button-text">Watch!</div>
-                  </button>
-                </form>
-              </div>
             </li>
             <li class="login">
               <a href="#" class="show-modal-login hidden"
                 ><i class="fas fa-user"></i
               ></a>
-              <div class="modal-login hidden">
-                <button class="close-modal-login">&times;</button>
-                <h3>Login into your account</h3>
-                <form action="login" method="post" id="login-form">
-                  <div class="schedule-form">
-                    <div class="form-description">
-                      <div class="form-input">
-                        <span>
-                          <i class="fa fa-envelope-o"></i>
-                        </span>
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          placeholder="Email"
-                        />
-                      </div>
-                      <div class="form-input">
-                        <span>
-                          <i class="fa fa-lock"></i>
-                        </span>
-                        <input
-                          type="text"
-                          name="password"
-                          id="password"
-                          placeholder="Password"
-                        />
-                      </div>
-                      <div class="remember-me">
-                        <input
-                          type="checkbox"
-                          id="remember"
-                          name="remember"
-                          value="remember"
-                        />
-                        <label for="remember" id="remember-label"
-                          >Remember me</label
-                        >
-                        <a href="#" class="forgot">Forgot Password?</a>
-                      </div>
-                      <div class="sign-up-option">
-                        <h5>Or sign up using</h5>
-                        <div class="sign-up-social">
-                          <a href="https://facebook.com" target="blank"
-                            ><i class="fab fa-facebook login-fb"></i
-                          ></a>
-                          <a href="https://google.com" target="blank"
-                            ><i class="fab fa-google login-google"></i
-                          ></a>
-                          <a href="https://twitter.com" target="blank"
-                            ><i class="fab fa-twitter login-tw"></i
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="intro-button webcam-button">
-                    <div class="button-text">Login</div>
-                  </button>
-                </form>
-              </div>
             </li>
           </ul>
           <div class="hamburger">
@@ -244,6 +162,86 @@
                 </button>
               </div>
             </div>
+          </form>
+        </div>
+        <div class="modal-webcam hidden">
+          <button class="close-modal-webcam">&times;</button>
+          <h3>Webcams</h3>
+          <p>To see your furry friend enter a key</p>
+          <form action="webcam" method="post" id="webcam-form">
+            <div class="schedule-form">
+              <div class="form-description">
+                <label for="services">Room key:</label>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-key"></i>
+                  </span>
+                  <input type="text" name="room-key" id="room-key" />
+                </div>
+              </div>
+            </div>
+            <button class="intro-button webcam-button">
+              <div class="button-text">Watch!</div>
+            </button>
+          </form>
+        </div>
+        <div class="modal-login hidden">
+          <button class="close-modal-login">&times;</button>
+          <h3>Login into your account</h3>
+          <form action="login" method="post" id="login-form">
+            <div class="schedule-form">
+              <div class="form-description">
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-lock"></i>
+                  </span>
+                  <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="remember-me">
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    value="remember"
+                  />
+                  <label for="remember" id="remember-label">Remember me</label>
+                  <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                <div class="sign-up-option">
+                  <h5>Or sign up using</h5>
+                  <div class="sign-up-social">
+                    <a href="https://facebook.com" target="blank"
+                      ><i class="fab fa-facebook login-fb"></i
+                    ></a>
+                    <a href="https://google.com" target="blank"
+                      ><i class="fab fa-google login-google"></i
+                    ></a>
+                    <a href="https://twitter.com" target="blank"
+                      ><i class="fab fa-twitter login-tw"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="intro-button webcam-button">
+              <div class="button-text">Login</div>
+            </button>
           </form>
         </div>
         <div class="overlay hidden"></div>
