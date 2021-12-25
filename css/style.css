@@ -153,10 +153,10 @@ body {
 
 .webcam-button {
   justify-content: center;
+  max-width: 290px;
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  margin: 0 auto;
 }
 
 @keyframes shake {
@@ -328,7 +328,6 @@ body {
 .form-description {
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 300px;
   width: 100%;
   margin: 20px 0 0 0;
@@ -337,7 +336,6 @@ body {
 .form-description label,
 .modal-img label {
   color: #494738;
-  text-align: center;
   font-size: 16px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -402,6 +400,7 @@ body {
 .remember-me .forgot {
   font-size: 13px;
   color: #1779ba;
+  font-family: "Poppins", sans-serif;
 }
 
 .sign-up-option {
@@ -416,11 +415,12 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 16px;
+  margin: 0 0 10px 0;
 }
 
 .sign-up-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .login-fb,
@@ -854,7 +854,7 @@ input#subscription::placeholder {
   justify-content: space-around;
   align-items: center;
   align-self: center;
-  background: #ffff00;
+  background: #00b444;
   max-width: 1024px;
   width: 100%;
   margin: 50px auto;
@@ -873,6 +873,10 @@ input#subscription::placeholder {
   width: 100%;
 }
 
+.join-us-content h3 {
+  color: #ffff00;
+}
+
 .join-button {
   justify-content: center;
 }
@@ -887,6 +891,17 @@ input#subscription::placeholder {
   min-height: 60vh;
   background: #005248;
   padding: 100px 0;
+}
+
+.logo.footer-logo {
+  display: flex;
+  align-self: center;
+  opacity: 0.3;
+  transition: all 300ms ease-in;
+}
+
+.logo.footer-logo:hover {
+  opacity: 1;
 }
 
 .footer-menu li a,
@@ -958,6 +973,7 @@ input#subscription {
 .difference {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
   align-items: center;
@@ -985,15 +1001,10 @@ input#subscription {
 
 .daycare-items {
   border-radius: 0 10px 10px 0;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #494738;
-}
-
-.boarding-green {
-  background-color: #00b444;
-  border: 5px dashed #ffff00;
 }
 
 .boarding-green h3 {
@@ -1009,18 +1020,23 @@ input#subscription {
   width: 100%;
 }
 
+.boarding-green {
+  background-color: #00b444;
+  border: 5px dashed #ffff00;
+}
+
 .difference-content h3 {
   margin: 20px 0;
 }
 
 .difference-content p {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .routine li {
   margin: 0 0 20px 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .routine li::before {

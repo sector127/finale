@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jeka - Daycare</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/cb9e4af121.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a id="btt-button"></a>
+    <header class="main-header">
+      <div class="top">
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li><a href="daycare.html">Daycare</a></li>
+            <li><a href="boarding.html">Boarding</a></li>
+            <li><a href="spa.html">Spa</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <a href="index.html"> <img src="images/logo.png" alt="logo" /></a>
+        </div>
+        <nav class="navigation rt-nav">
+          <ul>
+            <li class="active"><a href="about-us.html">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="webcam">
+              <a href="#" class="show-modal-webcam"
+                ><i class="fas fa-video cam"></i>Live</a
+              >
+            </li>
+            <li class="login">
+              <a href="#" class="show-modal-login hidden"
+                ><i class="fas fa-user"></i
+              ></a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="intro">
+      <div class="intro-content">
+        <h1>About jeka</h1>
+        <p>
+          At jeka, we believe in safe socialization, exercise and education for
+          your furry child
+        </p>
+        <button class="intro-button show-modal">
+          <div class="paw"><i class="fas fa-paw"></i></div>
+          <div class="button-text">Schedule Service</div>
+        </button>
+        <p>Or Call <a href="tel:+9950322770011">+9950322770011</a></p>
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h3>Schedule Service</h3>
+          <form action="send_page" method="post" id="schedule">
+            <div class="schedule-form">
+              <div class="form-description">
+                <label for="services">Choose a service:</label>
+                <div class="select-wrapper">
+                  <select id="services" name="services">
+                    <option value="daycare">Daycare</option>
+                    <option value="boarding">Boarding</option>
+                    <option value="spa">Spa</option>
+                    <option value="walking">Pet Walking</option>
+                    <option value="sitting">Pet Sitting</option>
+                  </select>
+                </div>
+                <label for="date">Pick a date:</label>
+                <input type="datetime-local" id="date" name="date" />
+                <label for="description">Special requirements</label>
+                <textarea
+                  class="desc"
+                  id="description"
+                  name="description-name"
+                  placeholder="Description"
+                ></textarea>
+              </div>
+              <div class="modal-img">
+                <img src="images/modal-image.png" alt="" />
+                <label for="sender">Your details</label>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="sender"
+                    name="sender-name"
+                    placeholder="Username"
+                  />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input
+                    type="email"
+                    id="e-mail"
+                    name="e-mail-name"
+                    placeholder="Email"
+                  />
+                </div>
+                <button type="submit" form="schedule" class="send-button">
+                  <span>Send</span>
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          fill="currentColor"
+                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-webcam hidden">
+          <button class="close-modal-webcam">&times;</button>
+          <h3>Webcams</h3>
+          <p>To see your furry friend enter a key</p>
+          <form action="webcam" method="post" id="webcam-form">
+            <div class="schedule-form">
+              <div class="form-description">
+                <label for="services">Room key:</label>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-key"></i>
+                  </span>
+                  <input type="text" name="room-key" id="room-key" />
+                </div>
+              </div>
+            </div>
+            <button class="intro-button webcam-button">
+              <div class="button-text">Watch!</div>
+            </button>
+          </form>
+        </div>
+        <div class="modal-login hidden">
+          <button class="close-modal-login">&times;</button>
+          <h3>Login into your account</h3>
+          <form action="login" method="post" id="login-form">
+            <div class="schedule-form">
+              <div class="form-description">
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-envelope-o"></i>
+                  </span>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-input">
+                  <span>
+                    <i class="fa fa-lock"></i>
+                  </span>
+                  <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="remember-me">
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    value="remember"
+                  />
+                  <label for="remember" id="remember-label">Remember me</label>
+                  <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                <div class="sign-up-option">
+                  <h5>Or sign up using</h5>
+                  <div class="sign-up-social">
+                    <a href="https://facebook.com" target="blank"
+                      ><i class="fab fa-facebook login-fb"></i
+                    ></a>
+                    <a href="https://google.com" target="blank"
+                      ><i class="fab fa-google login-google"></i
+                    ></a>
+                    <a href="https://twitter.com" target="blank"
+                      ><i class="fab fa-twitter login-tw"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="intro-button webcam-button">
+              <div class="button-text">Login</div>
+            </button>
+          </form>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+      <div class="intro-img">
+        <img src="images/about-us.png" alt="about-us" />
+      </div>
+    </section>
+    <section class="difference">
+      <div class="difference-img">
+        <img src="images/about-us.jpg" alt="about-us-1" />
+      </div>
+      <div class="difference-content serv-desc">
+        <h3>Overview</h3>
+        <p>
+          Our dog daycare centers provide the utmost in quality care as we
+          separate each dog by size, temperament and promise evaluated,
+          vaccinated dogs in a supervised environment. You can even watch them
+          play all day via our live webcams!
+        </p>
+        <p>
+          While our centers offer dog daycare, boarding and spa services (with
+          some offering grooming and training), our core service is daycare for
+          your dog. Daycare is a purposeful choice made for the love of your dog
+          - a selfless decision to ensure they are happy, healthy and equipped
+          to become a well-rounded pup. Even our boarding services offer your
+          pup an open-play environment to get them the socialization, exercise
+          and education they deserve.
+        </p>
+      </div>
+    </section>
+    <section class="difference">
+      <div class="daycare-items serv-desc">
+        <h3>Philosophy</h3>
+        <p>
+          Dogs are the world to us. They give us their all every day and expect
+          nothing in return. We're a really big deal to them. So they're a
+          really big deal to us. Big or small. Floppy ears or sloppy kissers. At
+          jeka, we have endless love for them all. And we stop at nothing to
+          make sure they're happy, safe and fulfilled even when you can't be
+          there. From our uncompromising safety standards to our extensive
+          training, it matters to us the way it matters to you. Life is too
+          short (even in dog years) to not live it up on the daily. Now you both
+          can. They're always up for a treat and when you're thinking of a place
+          for your pup to play, stay and get pampered, jeka is exactly what
+          they'd ask for if they could.
+        </p>
+      </div>
+      <div class="difference-img daycare-img">
+        <img src="images/about-us-2.jpg" alt="about-us-2" />
+      </div>
+    </section>
+    <section class="join-us">
+      <div class="join-us-wrapper">
+        <div class="join-us-img">
+          <img src="images/join-us-image.png" alt="join-us" />
+        </div>
+        <div class="join-us-content">
+          <h3>Join our team</h3>
+          <p class="how">
+            If you love pets and want exciting work, apply to be a Jeka Team
+            member Pet Care Provider! We train every team member and provide
+            ongoing support to help you get the most from your experience.
+          </p>
+          <button class="intro-button join-button">
+            <div class="button-text">Join now!</div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+    <footer class="main-footer">
+      <div class="logo footer-logo">
+        <a href="index.html"> <img src="images/logo.png" alt="logo" /></a>
+      </div>
+      <div class="menu-about">
+        <h3>About</h3>
+        <ul class="footer-menu">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Frenchase with us</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="menu-resources">
+        <h3>Resources</h3>
+        <ul class="footer-menu">
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Pet Resource Center</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up to receive Newsletter</p>
+        <form
+          action="mail_send"
+          method="post"
+          id="mail"
+          class="newsletter-form"
+        >
+          <input
+            type="text"
+            id="subscription"
+            name="subscription"
+            placeholder="Email Address"
+          />
+          <button type="submit" class="zip-submit footer-submit" form="mail">
+            <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </form>
+        <div class="social-icons">
+          <a href="https://facebook.com"
+            ><i class="fab fa-facebook-f social-icon"></i
+          ></a>
+          <a href="https://twitter.com"
+            ><i class="fab fa-twitter social-icon"></i
+          ></a>
+          <a href="https://instagram.com"
+            ><i class="fab fa-instagram social-icon"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

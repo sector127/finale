@@ -44,10 +44,6 @@
   .remember-me .forgot {
     font-family: "Poppins", sans-serif;
   }
-
-  .sign-up-option h5 {
-    margin: 0 0 10px 0;
-  }
   .modal {
     width: 90%;
     max-height: 100vh;
@@ -93,10 +89,16 @@
     margin: 20px;
     flex-wrap: wrap;
   }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
   .intro-content h1 {
     font-size: 28px;
     margin: 50px 0 0 0;
-    text-shadow: 0 3px 6px rgb(0 0 0 / 70%);
+    color: #494738;
   }
   .intro p,
   .intro a {
@@ -111,22 +113,64 @@
   }
   .serv-desc {
     border-radius: 10px;
+    padding: 20px;
   }
   .serv-desc h3,
   .join-us-content h3,
   .difference-content h3 {
     font-size: 24px;
   }
+  .difference-img {
+    margin: 20px;
+  }
   .highlight {
     font-size: 18px;
   }
+  .routine li {
+    margin: 0 0 20px 30px;
+  }
+  input#zip {
+    width: 130px;
+  }
 
   .our-friends {
-    min-height: 450px;
+    min-height: 500px;
   }
   .our-friends h2 {
     font-size: 26px;
     margin: 0 0 20px 0;
+  }
+  .container {
+    height: 400px;
+  }
+  .c1,
+  .c2,
+  .c3 {
+    width: 67%;
+  }
+  .prev {
+    left: 5%;
+  }
+  .next {
+    right: 5%;
+  }
+  .prev,
+  .next {
+    top: 40%;
+    color: #fff;
+    border: 1px solid #eee;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .join-us-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
 
   .main-footer {
