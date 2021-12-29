@@ -1,4 +1,20 @@
+@media only screen and (max-width: 1024px) {
+  .navigation ul li,
+  .navigation ul li a {
+    font-size: 14px;
+  }
+  .serv {
+    justify-content: center;
+  }
+  .path {
+    margin: 50px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .intro-content {
+    padding: 0;
+  }
   .navigation ul {
     position: fixed;
     left: -100%;
@@ -17,12 +33,12 @@
   }
 
   .navigation.rt-nav ul {
-    top: 340px;
+    top: 320px;
     left: -100%;
   }
 
   .navigation.rt-nav ul.act {
-    top: 330px;
+    top: 320px;
     left: 0;
   }
 
@@ -88,6 +104,7 @@
   .intro {
     margin: 20px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .intro-content {
     display: flex;
@@ -178,5 +195,14 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .prev-serv::before {
+    left: 101px;
+  }
+  .next-serv::before {
+    right: 90px;
   }
 }

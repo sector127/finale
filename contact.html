@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jeka - Boarding</title>
+    <title>jeka - Daycare</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -51,7 +51,7 @@
               <a href="index.html"><i class="fas fa-home"></i></a>
             </li>
             <li><a href="daycare.html">Daycare</a></li>
-            <li class="active"><a href="boarding.html">Boarding</a></li>
+            <li><a href="boarding.html">Boarding</a></li>
             <li><a href="spa.html">Spa</a></li>
           </ul>
         </nav>
@@ -61,7 +61,7 @@
         <nav class="navigation rt-nav">
           <ul>
             <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
             <li class="webcam">
               <a href="#" class="show-modal-webcam"
                 ><i class="fas fa-video cam"></i>Live</a
@@ -83,8 +83,11 @@
     </header>
     <section class="intro">
       <div class="intro-content">
-        <h1>jeka's Boarding Service</h1>
-        <p>Going on vacation? Why not treat your dog to one as well?</p>
+        <h1>Contact jeka</h1>
+        <p>
+          We provide recurring daycare for your dog, providing safe
+          socialization, education and exercise.
+        </p>
         <button class="intro-button show-modal">
           <div class="paw"><i class="fas fa-paw"></i></div>
           <div class="button-text">Schedule Service</div>
@@ -246,86 +249,68 @@
         </div>
         <div class="overlay hidden"></div>
       </div>
-      <div class="intro-img">
-        <img src="images/boarding.png" alt="boarding" />
-      </div>
-    </section>
-    <section class="difference">
-      <div class="difference-img">
-        <img src="images/boarding-1.jpg" alt="boarding-1" />
-      </div>
-      <div class="difference-content serv-desc">
-        <h3>DOG BOARDING</h3>
-        <p>
-          Dogs boarding with us will enjoy a staycation, burning off any excess
-          energy during a full day of play with our daycare dogs. Dogs are
-          separated into supervised playrooms depending on size, play style and
-          temperament, ensuring the comfort and safety of all our guests.
-          They'll enjoy 8-10 hours of open play that features brain games
-          designed to improve manners and behavior. There will also be plenty of
-          time for naps and breaks, should they require them. If your dog is
-          having lunch, he/she will be fed at the start of naptime and will have
-          plenty of time to digest their food before they are allowed to play
-          again. This private time is also when we administer any medications,
-          if applicable.
-        </p>
-      </div>
-    </section>
-    <section class="difference">
-      <div class="difference-content serv-desc daycare-items boarding-green">
-        <h3>FOR BOARDING</h3>
-        <p>
-          Our boarding facilities are fully equipped to handle dogs of all
-          shapes and sizes. We encourage you to bring your pup to our location
-          for daycare prior to an overnight or extended stay. We recommend at
-          least one day of daycare prior to your dog's overnight stay - three
-          days of daycare is ideal - to allow your pup to get used to the
-          facility and have a better overall experience. Your dog will become
-          comfortable with our staff, and learn that you will be coming back to
-          bring them home. It will also give our staff an opportunity to learn
-          your pup's personality and play preferences.
-        </p>
-        <p>
-          We ask that you arrive with your dog before 3 p.m. on the day they are
-          to begin boarding. Dogs may be dropped off as early as we open.
-        </p>
-      </div>
-      <div class="difference-img daycare-img">
-        <img src="images/boarding-2.png" alt="boarding-2" />
-      </div>
-    </section>
-    <section class="difference">
-      <div class="difference-img">
-        <img src="images/boarding-3.jpg" alt="boarding-3" />
-      </div>
-      <div class="difference-content serv-desc">
-        <h3>WHAT TO BRINGG</h3>
-        <p>
-          We care about your dog's safety and comfort. We encourage you to bring
-          your pup's own food to maintain their regular diet and avoid any
-          digestion issues. You may consider bringing a little extra food for
-          boarding as they burn a lot more calories in play than they typically
-          do at home! If you forget your food for meals - no worries! We have
-          in-house food for your convenience.
-        </p>
-        <p>
-          During their boarding stay, your dog will be fed at approximately 7
-          a.m. and 7 p.m., with a treat or lunch at nap time if you request.
-          Food will be served and prepared exactly as requested by each pet
-          parent. We'll accommodate any special dietary needs your pup may have,
-          and won't charge extra for feeding or administering medication.
-        </p>
-        <p>
-          You are encouraged to bring any bedding that will make your dog feel
-          “at home” and we will provide it only to them. (Please remember we
-          cannot guarantee bedding will be returned in the same condition.)
-        </p>
-        <p>
-          As your dog will play in an open area with other dogs, we do not
-          accept toys from home. Your dog may feel possessive of their own toys
-          and many are not suitable for the playroom as they are too easily torn
-          or ripped.
-        </p>
+      <div class="contact-wrapper">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47477.51790892142!2d43.502385!3d41.949927!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1640805760359!5m2!1sen!2sge"
+            width="650"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <form action="send_page" method="post" id="contact">
+          <div class="contact-form">
+            <div class="form-contact-description">
+              <textarea
+                class="desc"
+                id="description-contact"
+                name="description-name"
+                placeholder="Description"
+              ></textarea>
+            </div>
+            <div class="contact-info">
+              <input
+                type="text"
+                id="subject"
+                name="subject-name"
+                placeholder="Subject"
+              />
+              <input
+                type="text"
+                id="sender"
+                name="sender-name"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                id="e-mail"
+                name="e-mail-name"
+                placeholder="Email"
+              />
+              <button type="submit" form="contact" class="send-button">
+                <span>Send</span>
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <section class="join-us">
@@ -343,36 +328,6 @@
           <button class="intro-button join-button">
             <div class="button-text">Join now!</div>
           </button>
-        </div>
-      </div>
-    </section>
-    <section class="other-serv">
-      <div class="prev-next-wrapper">
-        <div class="prev-serv">
-          <div class="prev-serv-img">
-            <img src="images/daycare-nav.png" alt="daycare" />
-          </div>
-          <h4>Daycare</h4>
-          <p>
-            Your dog will love playing in our safe and supervised playrooms.
-          </p>
-          <a href="daycare.html">
-            <button class="prev-button">
-              <div class="button-text">Daycare</div>
-            </button>
-          </a>
-        </div>
-        <div class="next-serv">
-          <h4>Spa</h4>
-          <p>Get your pup squeaky clean dog spa.</p>
-          <a href="spa.html">
-            <button class="next-button">
-              <div class="button-text">Spa</div>
-            </button>
-          </a>
-          <div class="next-serv-img">
-            <img src="images/spa-nav.png" alt="spa" />
-          </div>
         </div>
       </div>
     </section>
