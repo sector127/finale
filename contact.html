@@ -3,6 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Dogs daycare services" />
+    <meta
+      name="keywords"
+      content="Daycare, Boarding, Spa, Grooming, Pet walking, Pet sitting"
+    />
+    <meta name="author" content="jeka" />
+    <!-- Fb Meta -->
+    <meta
+      property="og:url"
+      content="https://sector127.github.io/finale/index.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Contact Us | jeka.ge" />
+    <meta
+      property="og:description"
+      content="Contact us today to learn more about our premium services! Please
+      complete the form and we will respond to you shortly."
+    />
+    <meta
+      property="og:image"
+      content="hhttps://sector127.github.io/finale/images/join-us-image.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jeka - Daycare</title>
     <link
@@ -85,12 +107,12 @@
       <div class="intro-content">
         <h1>Contact jeka</h1>
         <p>
-          We provide recurring daycare for your dog, providing safe
-          socialization, education and exercise.
+          Contact us today to learn more about our premium services! Please
+          complete the form and we will respond to you shortly.
         </p>
         <button class="intro-button show-modal">
-          <div class="paw"><i class="fas fa-paw"></i></div>
-          <div class="button-text">Schedule Service</div>
+          <span class="paw"><i class="fas fa-paw"></i></span>
+          <span class="button-text">Schedule Service</span>
         </button>
         <p>Or Call <a href="tel:+9950322770011">+9950322770011</a></p>
         <div class="modal hidden">
@@ -184,7 +206,7 @@
               </div>
             </div>
             <button class="intro-button webcam-button">
-              <div class="button-text">Watch!</div>
+              <span class="button-text">Watch!</span>
             </button>
           </form>
         </div>
@@ -243,23 +265,13 @@
               </div>
             </div>
             <button class="intro-button webcam-button">
-              <div class="button-text">Login</div>
+              <span class="button-text">Login</span>
             </button>
           </form>
         </div>
         <div class="overlay hidden"></div>
       </div>
       <div class="contact-wrapper">
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47477.51790892142!2d43.502385!3d41.949927!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1640805760359!5m2!1sen!2sge"
-            width="650"
-            height="200"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
         <form action="send_page" method="post" id="contact">
           <div class="contact-form">
             <div class="form-contact-description">
@@ -271,24 +283,39 @@
               ></textarea>
             </div>
             <div class="contact-info">
-              <input
-                type="text"
-                id="subject"
-                name="subject-name"
-                placeholder="Subject"
-              />
-              <input
-                type="text"
-                id="sender"
-                name="sender-name"
-                placeholder="Name"
-              />
-              <input
-                type="email"
-                id="e-mail"
-                name="e-mail-name"
-                placeholder="Email"
-              />
+              <div class="form-input">
+                <span>
+                  <i class="fas fa-envelope-open-text"></i>
+                </span>
+                <input
+                  type="text"
+                  id="sender-contact"
+                  name="sender-name"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="form-input">
+                <span>
+                  <i class="fa fa-user"></i>
+                </span>
+                <input
+                  type="text"
+                  id="user"
+                  name="sender-name"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="form-input">
+                <span>
+                  <i class="fa fa-envelope-o"></i>
+                </span>
+                <input
+                  type="email"
+                  id="e-mail-contact"
+                  name="e-mail-name"
+                  placeholder="Email"
+                />
+              </div>
               <button type="submit" form="contact" class="send-button">
                 <span>Send</span>
                 <div class="svg-wrapper-1">
@@ -313,6 +340,17 @@
         </form>
       </div>
     </section>
+    <section class="find-us">
+      <h2>Find us on map</h2>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47477.51790892142!2d43.502385!3d41.949927!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1640805760359!5m2!1sen!2sge"
+          style="border: 0; width: 100%; height: 100%"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
     <section class="join-us">
       <div class="join-us-wrapper">
         <div class="join-us-img">
@@ -326,7 +364,7 @@
             ongoing support to help you get the most from your experience.
           </p>
           <button class="intro-button join-button">
-            <div class="button-text">Join now!</div>
+            <span class="button-text">Join now!</span>
           </button>
         </div>
       </div>
